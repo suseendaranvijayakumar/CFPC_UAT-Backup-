@@ -1,0 +1,23 @@
+<template>
+    <div class="HeadingStyle">
+    <img class="sfdcCbImage" alt="" src={Fellowship}>
+    <a onclick={redirectToFellowship} id="FSP">{label.OWFELLOWSHIP}</a>
+    <br id="FMCbr">
+    <img class="sfdcCbImage" alt="" src={Certifications}>
+    <a onclick={redirectToFM} id="FM">{label.FM}</a>
+    <br id="EMbr">
+    <img class="sfdcCbImage" alt="" src={Examination}>
+    <a onclick={redirectToEM} id="EM">{label.EM}</a>
+    <br id="CACbr">
+    <img class="sfdcCbImage" alt="" src={Competence}>
+    <a onclick={redirectToCAC} id="CAC">{label.CAC}</a>
+    <br id="Exbr">
+    <img class="sfdcCbImage" alt="" src={Examiner}>
+    <a onclick={redirectToEX} id="Ex">{label.ASEXAMINER}</a>
+    </div>
+    <div if:true={isLoaded}>
+        <lightning-spinner
+            alternative-text="Loading..." variant="brand">
+        </lightning-spinner>
+    </div>
+</template>

@@ -1,0 +1,10 @@
+{
+    "OpenWaterId": "",
+    "CfpcMemberId": 446,
+    "PaymentTxnRefId": "118888",
+    "PaymentAmount": 3270.00,
+    "PaymentTxnResponseCode": 1,
+    "CreditCardType": "VISA",
+    "SourceSystem": "EXAM",
+    "ProductCode": "EX_EF"
+}

@@ -1,0 +1,40 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="2" padding="around-small">
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+            <b class="headerstyle" translate="yes">Cart Charges</b><br/>
+            <table style="width:100%">
+              <tr>
+                <th class="slds-theme_backgroundColor" translate="yes">Item Total</th>
+                <td class="ItemTotal">${totalamount}</td>
+              </tr><br/><br/>
+              <tr>
+                <th class="TransText" translate="yes">TRANSACTION GRAND TOTAL</th>
+                <td class="TransTotal">${totalamount}</td>
+              </tr>
+            </table><br/><br/><br/>
+
+    <b class="subHeader">Payment Details</b><br/><br/>
+        <div class="slds-form_horizontal slds-form slds-grid slds-wrap columnwidth">
+            <lightning-input  type="Number"   label ="Payment Amount" value={totalamount} formatter="currency" maximum-fraction-digits="2" read-only></lightning-input>
+            <!-- <lightning-input  type="text" value="" label ="Payment Method"></lightning-input> -->
+            <lightning-combobox
+            name="progress"
+            label="Payment Method"
+            value={value}
+            placeholder="Select Method"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+            <lightning-input  type="tel" data-id="cardnumber" label="Card Number" max-length="19" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4} " placeholder="XXXX XXXX XXXX XXXX" message-when-pattern-mismatch="Please enter valid credit card number" required="true" oninput={handleCCInput}
+            onchange={handleCCInput} onblur={handleCCInput}></lightning-input>
+            
+            <lightning-input  type="text" label="Name on Card"  value="" required="true"></lightning-input>
+            <lightning-input  type="tel" label="Expiration Date" placeholder="MMYY" value={cdcNumber} max-length="4" required="true" onblur={checkCDC}></lightning-input>
+            <lightning-input  type="tel" label="CSC"  value="" max-length="4"></lightning-input>
+            <lightning-textarea name="input2" label="Card address" value={cardAddress} disabled={cardAddressflag}></lightning-textarea>
+            <button class ="btn" type="button" onclick={handlechangeAddress}>Change Address</button>
+        </div>
+    </lightning-layout-item>
+</lightning-layout>
+    </template>

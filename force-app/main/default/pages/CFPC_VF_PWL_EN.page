@@ -1,0 +1,74 @@
+<apex:page standardController="Contact" extensions="TranslationController" language="{!selectedLang}" applyBodyTag="false" applyHtmlTag="false" sidebar="false" showHeader="false" renderAs="PDF" >
+    <table cellpadding="0" cellspacing="0" width="100%" style="font-family:sans-serif; font-size:13px;" > 
+        <tr>
+            <td>
+                <div style="margin-bottom:20px;"><apex:outputText value="{!$Label.PWL_EN}"/></div>
+                <div style="margin-bottom:15px;">
+                    <apex:outputText value="{!$Label.PWL_EN_Body1}"/>                
+                </div>
+                <div style="margin-bottom:15px;">
+                    <apex:outputText value="{!$Label.PWL_EN_Body_2}"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-top:40px;">
+                <table cellpadding="0" cellspacing="0" width="100%" style="font-family:sans-serif; font-size:13px; table-layout:fixed;" >
+                    <tr>
+                        <td>
+                            <ul style="list-style:disc; margin:0 0 0 15px; padding-left:17px;  line-height:20px;">
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_3}"/></li>
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_4}"/></li>
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_5}"/></li>
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_6}"/></li>
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_7}"/></li>
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_8}"/></li>
+                            </ul>
+                        </td>
+                        <td width="100"></td>
+                        <td>
+                            <ul style="list-style:disc; margin:0 0 0 15px; padding-left:17px; line-height:20px;">
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_9}"/></li>
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_10}"/></li>
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_11}"/></li>
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_12}"/></li>
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_13}"/></li>
+                                <li><apex:outputText value="{!$Label.PWL_EN_Body_14}"/></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="margin-top:50px;">
+                    <apex:outputText value="{!$Label.PWL_EN_Body_15}"/> 
+                </div>
+                <div style="margin-top:15px;">
+<apex:outputText value="{!$Label.PWL_EN_Body_16}"/><a href="https://www.cfpc.ca/en/covid-19-information-andresources">https://www.cfpc.ca/en/covid-19-information-andresources.</a>
+                </div>
+                <div style="margin-top:15px;">
+                    <apex:outputText value="{!$Label.PWL_EN_Body_17}"/><a href="mailto:membership@cfpc.ca">membership@cfpc.ca.</a>
+                </div>
+                <div style="margin-top:15px;"><apex:outputText value="{!$Label.OAL_EN_Body_20}"/></div>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-top:15px;">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <apex:outputText value="{!$Label.PWL_EN_Body_18}"/><br/>
+                            <apex:outputText value="{!$Label.PWL_EN_Body_19}"/>
+                        </td>
+                        <td>
+                            <apex:outputText value="{!$Label.PWL_EN_Body_20}"/><br/>
+                            <apex:outputText value="{!$Label.PWL_EN_Body_21}"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</apex:page>

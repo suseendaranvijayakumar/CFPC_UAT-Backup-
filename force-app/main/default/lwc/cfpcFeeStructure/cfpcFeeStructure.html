@@ -1,0 +1,156 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <template if:false={showPage}>
+        <div>
+        <p><strong>
+            <span class="monthsbilled" translate="yes">
+                <br></br>Months Billed
+            </span></strong></p>
+        </div>
+        <br></br>
+        <table class="width3">
+        <thead>
+        <tr>
+            <th class="table1">Bill Begin</th>
+            <td> {billBegin} </td>
+        </tr>
+        <tr>
+            <th class="table1"> Bill End </th>
+            <td> {billEnd} </td>
+        </tr>
+        <tr>
+        <th class="table1"> Months Billed </th>
+        <td> {monthsBilled}</td>
+        </tr>
+        </thead>
+        
+        </table>
+        <br></br>
+    </template>
+    <div class="panel">
+        <h2 class="panel-title" translate="yes">Fee Summary</h2>
+        <div class="panel-body1">
+        <div class="panel-body">
+            <span class="SectionLabel" translate="yes">CFPC &amp; Chapter Fees</span>
+            <table class="Grid">
+                <tbody>
+                    <tr>
+                        <th class="column1"></th>
+                        <th class="column2"></th>
+                        <th class="column3"><span translate="yes">Item</span></th>
+                        <th class="column4">
+                            <span translate="yes">Amount</span></th>
+                    </tr>
+                    <template for:each={data} for:item="dt">
+                        <tr key={dt.Id}>
+                            <td class="none1"></td>
+                            <td class="width4">
+                                <lightning-input type="checkbox" 
+                                checked disabled></lightning-input>
+                            </td>
+                            <td scope="row" data-label="GBU" class="width1">
+                                <div class="slds-cell-wrap">
+                                    <lightning-input type="text" value={dt.SBQQ__Product__r.Name}
+                                readonly></lightning-input>
+                                </div>
+                            </td>
+                            <td scope="row" class="width2" align="right">
+                                <div class="slds-cell-wrap">
+                                    <lightning-input type="number"  value={dt.SBQQ__NetTotal__c} formatter="currency" maximum-fraction-digits="2" readonly>
+                                    </lightning-input>
+                                </div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+        <div class="panel-body">
+            <span class="SectionLabel" translate="yes">Other Fees</span>
+            <table class="Grid">
+                <tbody>
+                    <tr>
+                        <th class="column1"></th>
+                        <th class="column2"></th>
+                        <th class="column3"><span translate="yes">Item</span></th>
+                        <th class="column4">
+                            <span translate="yes">Amount</span></th>
+                    </tr>
+                    <template for:each={data1} for:item="dt1">
+                        <tr key={dt1.Id}>
+                            <td class="none1"></td>
+                            <td class="width4">
+                                <!-- <lightning-input type="checkbox" name={dt1.Id} value={dt1.SBQQ__NetTotal__c}
+                                checked onchange={deleteQuoteLineOnChange}></lightning-input> -->
+                                <lightning-input type="checkbox" checked disabled></lightning-input>
+                            </td>
+                            <td scope="row" data-label="GBU" class="width1">
+                                <div class="slds-cell-wrap">
+                                    <lightning-input type="text" value={dt1.SBQQ__Product__r.Name}
+                                readonly></lightning-input>
+                                </div>
+                            </td>
+                            <td scope="row" class="width2" align="right">
+                                <div class="slds-cell-wrap">
+                                    <lightning-input type="number"  value={dt1.SBQQ__NetTotal__c} formatter="currency" maximum-fraction-digits="2" readonly>
+                                </lightning-input>
+                                </div>
+                            </td>
+                        </tr>
+                    </template>
+                    <template for:each={data2} for:item="dt2">
+                        <tr key={dt2.Id}>
+                            <td class="none1"></td>
+                            <td class="width4">
+                                <lightning-input type="checkbox" checked disabled></lightning-input>
+                            </td>
+                            <td scope="row" data-label="GBU" class="width1">
+                                <div class="slds-cell-wrap">
+                                    <lightning-input type="text" value={dt2.SBQQ__Product__r.Name}
+                                readonly></lightning-input>
+                                </div>
+                            </td>
+                            <td scope="row" class="width2" align="right">
+                                <div class="slds-cell-wrap">
+                                    <!-- <lightning-input type="Decimal" value={donation} name="Donation" onblur={onchange}></lightning-input> -->
+                                    <lightning-input type="number"  value={dt2.SBQQ__NetTotal__c} formatter="currency" maximum-fraction-digits="2" readonly>
+                                    </lightning-input>
+                                </div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        </div>
+        <br></br>
+        
+        <template if:true={displayAmount}>
+            <div class="slds-float_right slds-text-title_bold">Subtotal   ${subtotal} </div>
+    </template>
+    <br></br>
+    
+        <lightning-button if:false={showPage}
+            label="Proceed To Payment"
+            title="Proceed To Payment"
+            onclick={handleNextClick}
+            class="slds-float_right" 
+            variant="brand">
+        </lightning-button>
+
+    
+        <lightning-button if:false={showPage}
+            label="Save"
+            title="Save"
+            onclick={handlePauseClick} 
+            class="slds-float_left"
+            variant="brand">
+        </lightning-button>
+
+
+
+
+        <br></br>
+      </template>
+</template>

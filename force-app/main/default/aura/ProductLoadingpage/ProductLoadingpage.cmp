@@ -1,0 +1,25 @@
+<aura:component implements="force:appHostable,lightning:availableForFlowScreens,force:hasRecordId,force:lightningQuickAction" access="global" controller="QuoteLineController" >
+	
+    
+    
+    <!--aura handler with waiting and donewaiting events-->
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!--component attributs -->
+    <aura:attribute name="spinner" type="boolean" default="True"/>
+    
+    <aura:attribute  name="RecordId"  type="Id" default="Opportunity" />
+     
+    <!--loading spinner start-->
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Calculation in progress.. Please proceed further</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+  
+</aura:component>

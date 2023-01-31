@@ -1,0 +1,121 @@
+.panel-title{
+    
+    letter-spacing: 1px;
+    display: inline;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: inherit;
+    line-height: 2.45em;
+    font-weight:600;
+    font-size:20px;
+    font-family:"Frank Ruhl Libre", serif;
+    font-size:150;
+    
+}
+.panel{
+    box-shadow:none;
+}
+.panel-body{
+    margin-bottom:1em;
+}
+
+.panel-body1{
+    margin-bottom:1em;
+    display: block;
+}
+
+.SectionLabel{
+    font-weight:600;
+    font-size:15px;
+    font-family:"Frank Ruhl Libre", serif;
+    display: inline;
+}
+.Grid{
+    padding-left: 7px;
+    padding-right: 7px;
+    border-collapse: collapse;
+    margin: 5px;
+    border: #768ca5;
+    background-color: transparent;
+    border-spacing: 0;
+    
+}
+.table .th .td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+    
+}
+table.Grid th{
+    border-top: solid 1px #777;
+    border-bottom: solid 1px #777;
+    height: 28px !important;
+    color: black !important;
+    text-align: left;
+    background: #eeeeee;
+}
+
+table.Grid td {
+    padding: 4px 7px;
+    border-style: solid;
+    border-color: #999999;
+    border-width: 0 1px 1px 1px;
+    border-collapse: collapse;
+    background-color: #fff;
+    height:40px;
+}
+
+.footer{
+    text-align:center;
+}
+
+.column1{
+    border-right:solid 1px #777;
+    width:0;
+    display:none;
+}
+
+.column2{
+    border-left:solid 1px #777;
+    width:1%;
+}
+
+.column3{
+    white-space:nowrap;
+    width:79%;
+}
+
+.column4{
+    white-space:nowrap;
+    width:8%;
+    border-right:solid 1px #777;
+}
+
+.monthsbilled{
+    font-family: 'MS Sans Serif';
+     font-size: 18px;
+}
+
+.table1{
+    background-color: #f5f5f5;
+}
+
+.width1{
+    width:10.25rem;
+}
+
+.width2{
+    width:6.25rem;
+}
+
+.width3{
+    width:20%;
+}
+
+.width4{
+    width:1%;
+}
+
+.none1{
+    display:none;
+}

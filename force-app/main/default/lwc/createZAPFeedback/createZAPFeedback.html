@@ -1,0 +1,13 @@
+<template>
+	<h1 class="slds-text-heading_medium slds-align_absolute-center slds-var-p-around_medium">New Feedback</h1>
+
+    <lightning-card title="Information">
+        <div class="slds-var-p-horizontal_small">
+            <lightning-record-form
+                object-api-name={feedbackObject}
+                fields={myFields}
+                onsuccess={handleFeedbackCreated}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

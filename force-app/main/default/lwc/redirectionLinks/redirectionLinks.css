@@ -1,0 +1,11 @@
+.HeadingStyle{
+    font-size: 26px;
+    font-family: sans-serif;
+    width: 100%;
+    text-align: left;
+    color: #013F78;
+}
+.sfdcCbImage{
+    max-width: 100%;
+    height: auto!important;  
+}

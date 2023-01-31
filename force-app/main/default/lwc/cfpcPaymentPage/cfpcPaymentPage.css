@@ -1,0 +1,76 @@
+.subHeader {
+    font-family: sans-serif;
+    font-size: 150% !important;
+    letter-spacing: 1px; 
+    
+} 
+.headerstyle {
+    font-family: sans-serif;
+    font-size: 28px; 
+    color: #013F77;
+    }
+.columnwidth{
+    width: 395px;
+    font-family: sans-serif;
+}
+.fieldProp{
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.slds-theme_backgroundColor{
+    background-color: rgb(243, 243, 243);
+    font-family: sans-serif;
+    float: left;
+    font-size: 16px;
+    clear: left;
+    width: 100%;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+
+}
+.ItemTotal{
+
+    border: none;
+    background-color: rgb(243, 243, 243);
+    font-family: sans-serif;
+    text-align: right;
+    padding-block: 8px;
+    padding-left: 7px;
+    font-size: 16px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-right: 0.5em;
+}
+.TransTotal{
+
+    border: none; 
+    color: #013F77;
+    font-family: sans-serif;
+    text-align: right;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    font-size: 16px;
+    padding-right: 0.5em;
+}
+.TransText{
+    border: none; 
+    color: #013F77;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+  
+}
+.btn {
+    border: none;
+    background-color: inherit;
+    padding: 4px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: orange;
+    position: relative;
+    left: 250px;
+    top: -12px;
+  }
+  .btn:hover {background: #eee;}

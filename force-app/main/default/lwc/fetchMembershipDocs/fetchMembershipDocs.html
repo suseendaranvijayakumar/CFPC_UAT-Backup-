@@ -1,0 +1,20 @@
+<template>
+<b class="headerstyle">{label.welcomeText1}
+<br/>{label.welcomeText2}</b><br/><br/>
+    <template if:true={recordUrl}>
+        <template for:each={recordUrl} for:item="url">
+            <p key={url.Title}><lightning-icon icon-name="doctype:pdf" alternative-text="PDF file" size="small" title="PDF"> </lightning-icon>&nbsp;&nbsp;
+                <a href={url.DocUrl}>{url.Title}</a>
+            </p>
+        </template>
+        </template><br/>
+        <b class="subHeader">{label.chapterdocuments}</b><br/><br/>
+        <template if:true={chapterdocs}>
+            <template for:each={chapterdocs} for:item="curl">
+                <p key={curl.chapTitle}><lightning-icon icon-name="doctype:pdf" alternative-text="PDF file" size="small" title="PDF"> </lightning-icon>&nbsp;&nbsp;
+                    <a href={curl.chapDocUrl}>{curl.chapTitle}</a>
+                </p>
+            </template>
+            </template>
+     
+</template>

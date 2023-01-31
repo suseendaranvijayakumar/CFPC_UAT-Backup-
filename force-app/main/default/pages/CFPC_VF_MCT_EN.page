@@ -1,0 +1,75 @@
+<apex:page standardController="Contact" extensions="TranslationController" language="{!selectedLang}" applyBodyTag="false" applyHtmlTag="false" sidebar="false" showHeader="false" renderAs="PDF">
+    <head>
+        <style type="text/css" media="print">
+            .watermark {
+            background-repeat: no-repeat;
+            background-position: center 110px;
+            background-image: url("{!URLFOR($Resource.CollegiumMedicorumLogoWatermark)}");
+            } 
+        </style>
+    </head>
+    <body class="watermark">
+        <!--<img src="{!URLFOR($Resource.CollegiumMedicorumLogo)}" width="70%" height="100%" style="position:fixed; background-repeat:no-repeat; left:50%m; top:50%; z-index:0; "/>-->
+        <table cellpadding="0" cellspacing="0" width="100%" style="font-family:sans-serif; font-size:13px;" >
+            <tr>
+                <td align="center"><img src="{!$Resource.CFPCLogo2}" width="60%" /></td>
+            </tr>
+            <tr>
+                <td align="center" style="padding-top:55px;"><apex:outputText value="{!$Label.MCT_EN_Body_1}"/></td>
+            </tr>
+            <tr>
+                <td  align="center" style="padding-top:35px; font-size:25px;">
+                <strong>
+                <!--<apex:outputPanel rendered="{!User.Name != null}">{!User.Name}</apex:outputPanel>-->
+                <apex:outputPanel >{!pdfdata.Salutation} {!pdfdata.ContactName}</apex:outputPanel></strong>
+                </td>
+            </tr>
+            <tr>
+                <td  align="center" style="padding-top:35px;">
+                   <apex:outputText value="{!$Label.MCT_EN_Body_2}"/><br/>
+                   <apex:outputText value="{!$Label.MCT_EN_Body_3}"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="font-size:30px; padding-top:50px;"><strong><apex:outputText value="{!$Label.MCT_EN_Body_4}"/></strong></td>
+            </tr>
+            <tr>
+                <td align="center" style="padding-top:60px;"><apex:outputText value="{!$Label.MCT_EN_Body_5}"/></td>
+            </tr>
+            <tr>
+                <td style="padding-top:80px;">{!pdfdata.DocumentGenerationDate}
+                    <div style="padding-top:15px;">Date</div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top:80px;">
+                    <table cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed;">
+                        <tr>
+                            <td style="padding-bottom:7px;"><img src="{!URLFOR($Resource.CFPCSign1)}" width="70%" height="" style=""/></td>
+                            <td width="100"></td>
+                            <td style="padding-bottom:7px;"><img src="{!URLFOR($Resource.CFPCSign2)}" width="70%" height="" style=""/></td>
+                        </tr>
+                        <tr>
+                            <td style="border-top:1px solid #000; font-size:10px; padding-top:7px; padding-bottom:10px;">
+                                <div style="line-height:15px;">Paul Sawchuk MD, MBA, CCFP, FCFP <br/><apex:outputText value="{!$Label.MCT_EN_Footer_1}"/></div>
+                            </td>
+                            <td width="100"></td>
+                            <td style="border-top:1px solid #000; font-size:10px; padding-top:7px; padding-bottom:10px;">
+                                <div style="line-height:15px;">
+                                    Francine Lemire MD CM, CCFP, FCFP, CAE<br/>
+                                    <apex:outputText value="{!$Label.MCT_EN_Footer_2}"/>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </td>  
+            </tr>
+            <tr>
+            	<td>
+                	<center><img src="{!URLFOR($Resource.CollegiumMedicorumLogo)}" width="" height="" style=""/></center>
+                </td>
+            </tr>
+        </table>
+    </body>
+</apex:page>
